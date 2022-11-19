@@ -1,8 +1,13 @@
 [package]
 name = "xgcode"
+authors = ["Maxime Augier <max@xolus.net>"]
 version = "0.1.0"
 edition = "2021"
-
+description = "A library for the xgcode (.gx) file format, used by FlashForge 3D printers"
+repository = "https://github.com/maugier/rust-xgcode/"
+license = "GPL-3.0-or-later"
+keywords = ["gcode"]
+categories = ["parsing"]
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
