@@ -43,15 +43,21 @@ pub struct Header {
 
 #[derive(Clone,Debug,Eq,PartialEq)]
 pub struct XGCode {
+    /// XGcode header
     pub header: Header,
+    /// Print thumbnail (BMP file, 80x60, 8-bit RGB)
     pub thumbnail: Vec<u8>,
+    /// GCode file
     pub gcode: Vec<u8>
 }
 
 #[derive(Copy,Clone,Debug,Eq,PartialEq)]
 pub struct XGCodeRef<'a> {
+    /// XGcode header
     pub header: Header,
+    /// Print thumbnail (BMP file, 80x60, 8-bit RGB)
     pub thumbnail: &'a [u8],
+    /// Print thumbnail (BMP file, 80x60, 8-bit RGB)
     pub gcode: &'a [u8],
 }
 
@@ -161,6 +167,8 @@ impl<'a> XGCodeRef<'a> {
 #[cfg(test)]
 mod tests {
     
+
+    use std::{fs::File, io::Write};
 
     use crate::XGCode;
 
